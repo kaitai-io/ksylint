@@ -10,12 +10,12 @@
 ## Installation
 
 ``` bash
-# pip install ksylint TODO
+pip install ksylint
 ```
 
 ## Usage
 ``` bash
-# ksylint hello_world.ksy TODO
+ksylint hello_world.ksy
 ```
 
 ### Missing style guide tests (TODO)

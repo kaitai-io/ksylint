@@ -1,9 +1,13 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='ksylint',
-    version='0.1',
+    version='0.2.1',
     description='A linter for ksy files.',
+    long_description=long_description,
     url='http://github.com/cugu/ksylint',
     author='Jonas Plum',
     license='GPL-3.0-or-later',

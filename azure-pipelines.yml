@@ -27,7 +27,7 @@ jobs:
     continueOnError: true
 
   - script: |
-      pip install pytest pytest-cov
+      pip install pytest pytest-cov pytest-azurepipelines
       pytest . --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html
     displayName: 'Test with pytest'
 
@@ -43,9 +43,16 @@ jobs:
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
 
-  # - script: 'pip install twine'
-  # - task: TwineAuthenticate@0
-  #   inputs:
-  #     artifactFeeds: 'feed_name1, feed_name2'
-  #     externalFeeds: 'feed_name1, feed_name2'
-  # - script: 'twine upload -r {feedName/EndpointName} --config-file $(PYPIRC_PATH) {package path to publish}'
+# - job: 'Publish'
+#   pool:
+#     vmImage: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
+
+#   steps:
+#   # Install python distributions like wheel, twine etc
+#   - script: pip install wheel twine
+
+#   # Build the python distribution from source
+#   - script: python setup.py bdist_wheel
+
+#   # Use command line script to 'twine upload', use -r to pass the repository name and --config-file to pass the environment variable set by the authenticate task.
+#   - script: python -m twine upload --config-file $(PYPIRC_PATH) dist/*.whl
