@@ -1,7 +1,7 @@
 import unittest
 import os
 import os.path as path
-import lint
+from lint import lint
 
 
 class TestValidation(unittest.TestCase):
