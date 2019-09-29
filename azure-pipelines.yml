@@ -41,3 +41,10 @@ jobs:
       codeCoverageTool: Cobertura
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
+
+  # - script: 'pip install twine'
+  # - task: TwineAuthenticate@0
+  #   inputs:
+  #     artifactFeeds: 'feed_name1, feed_name2'
+  #     externalFeeds: 'feed_name1, feed_name2'
+  # - script: 'twine upload -r {feedName/EndpointName} --config-file $(PYPIRC_PATH) {package path to publish}'
