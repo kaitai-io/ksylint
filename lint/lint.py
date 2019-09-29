@@ -61,7 +61,7 @@ def lint_file(filename):
             inst = yaml.load(f, Loader=yaml.FullLoader)
 
             # validate schema
-            lint_order(inst)
+            return_code += lint_order(inst)
 
             dir_path = os.path.dirname(os.path.realpath(__file__))
             with open(path.join(dir_path, "ksy_schema.json")) as schema_io:
