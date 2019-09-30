@@ -12,7 +12,8 @@ jobs:
         python-version: [3.6, 3.7]
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
@@ -32,6 +33,13 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pytest . --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html
-    - uses: codecov/codecov-action@v1.0.2
+    - name: Coverage Upload
+      uses: codecov/codecov-action@v1.0.2
       with:
         token: ${{secrets.CODECOV_TOKEN}}
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
