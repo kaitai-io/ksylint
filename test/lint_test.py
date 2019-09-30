@@ -1,7 +1,7 @@
 import unittest
 import os
 import os.path as path
-from lint import lint
+from ksylint import lint
 
 
 class TestValidation(unittest.TestCase):

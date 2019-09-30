@@ -12,10 +12,10 @@ setup(
     url='http://github.com/cugu/ksylint',
     author='Jonas Plum',
     license='GPL-3.0-or-later',
-    packages=['lint'],
+    packages=['ksylint'],
     entry_points={
         'console_scripts': [
-            'ksylint=lint.lint:main',
+            'ksylint=ksylint.lint:main',
         ],
     },
     install_requires=[
@@ -24,7 +24,7 @@ setup(
         "PyYAML==5.1.2",
     ],
     package_data={
-        'lint': ['ksy_schema.json'],
+        'ksylint': ['ksy_schema.json'],
     },
     zip_safe=False,
     python_requires='>=3.6',
