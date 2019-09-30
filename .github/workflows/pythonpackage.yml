@@ -39,6 +39,7 @@ jobs:
         token: ${{secrets.CODECOV_TOKEN}}
     - name: Build
       run: |
+        pip install wheel
         python setup.py sdist bdist_wheel
     - name: Publish package
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
