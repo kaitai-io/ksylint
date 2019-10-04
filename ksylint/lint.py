@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from jsonschema import Draft7Validator
 from yamllint import linter, config
 import argparse
