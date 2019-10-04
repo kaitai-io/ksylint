@@ -1,8 +1,8 @@
 <h1 align="center">ksylint</h1>
 
-<p align="center">Check kaitai .ksy files for errors and style flaws.</p>
+<p align="center">Check Kaitai Struct .ksy files for errors and style flaws.</p>
 
-<p  align="center">
+<p align="center">
  <a href="https://dev.azure.com/cugu/dfir/_build?definitionId=5&_a=summary"><img src="https://img.shields.io/azure-devops/build/cugu/dfir/5" alt="build" /></a>
  <a href="https://dev.azure.com/cugu/dfir/_build?definitionId=5&_a=summary"><img src="https://img.shields.io/azure-devops/coverage/cugu/dfir/5" alt="coverage" /></a>
 </p>
