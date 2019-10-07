@@ -31,6 +31,7 @@ jobs:
         pytest . --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html
     - name: Coverage Upload
       run: bash <(curl -s https://codecov.io/bash)
+      if: matrix.python-version == '3.7'
     - name: Build
       run: |
         pip install wheel
