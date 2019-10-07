@@ -34,9 +34,7 @@ jobs:
         pip install pytest pytest-cov
         pytest . --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml --cov-report=html
     - name: Coverage Upload
-      uses: codecov/codecov-action@v1.0.2
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
+      run: bash <(curl -s https://codecov.io/bash)
     - name: Build
       run: |
         pip install wheel
