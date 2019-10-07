@@ -3,8 +3,8 @@
 <p align="center">Check Kaitai Struct .ksy files for errors and style flaws.</p>
 
 <p align="center">
- <a href="https://dev.azure.com/cugu/dfir/_build?definitionId=5&_a=summary"><img src="https://img.shields.io/azure-devops/build/cugu/dfir/5" alt="build" /></a>
- <a href="https://dev.azure.com/cugu/dfir/_build?definitionId=5&_a=summary"><img src="https://img.shields.io/azure-devops/coverage/cugu/dfir/5" alt="coverage" /></a>
+ <a href="https://github.com/cugu/ksylint/actions"><img src="https://github.com/cugu/ksylint/workflows/Python%20package/badge.svg" alt="badge"></a>
+ <a href="https://codecov.io/gh/cugu/ksylint"><img src="https://codecov.io/gh/cugu/ksylint/branch/master/graph/badge.svg"></a>
 </p>
 
 ## Installation
