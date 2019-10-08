@@ -3,7 +3,7 @@
 <p align="center">Check Kaitai Struct .ksy files for errors and style flaws.</p>
 
 <p align="center">
- <a href="https://github.com/cugu/ksylint/actions"><img src="https://github.com/cugu/ksylint/workflows/Python%20package/badge.svg" alt="badge"></a>
+ <a href="https://github.com/cugu/ksylint/actions"><img src="https://github.com/cugu/ksylint/workflows/Pipeline/badge.svg" alt="badge"></a>
  <a href="https://codecov.io/gh/cugu/ksylint"><img src="https://codecov.io/gh/cugu/ksylint/branch/master/graph/badge.svg"></a>
 </p>
 
