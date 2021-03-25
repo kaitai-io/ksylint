@@ -21,7 +21,7 @@ setup(
     install_requires=[
         "yamllint==1.17.0",
         "jsonschema==3.0.2",
-        "PyYAML==5.1.2",
+        "PyYAML==5.4",
     ],
     package_data={
         'ksylint': ['ksy_schema.json'],
